@@ -26,6 +26,12 @@ class Categories
         $this->products = new ArrayCollection();
     }
 
+    // Conversion en chaine de caractères pour le mapping de Categories et Products pour EasyAdmin
+    public function __toString()
+    {
+        return $this->getName();
+    }
+
     public function getId(): ?int
     {
         return $this->id;

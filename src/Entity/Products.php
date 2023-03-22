@@ -21,7 +21,7 @@ class Products
     private ?string $description = null;
 
     #[ORM\Column]
-    private ?int $price = null;
+    private ?float $price = null;
 
     #[ORM\Column(length: 255)]
     private ?string $slug = null;
