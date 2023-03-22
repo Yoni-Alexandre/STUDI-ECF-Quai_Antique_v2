@@ -20,7 +20,7 @@ class Reservations
     #[ORM\Column(length: 255)]
     private ?string $allergie = null;
 
-    #[ORM\Column(type: Types::DATETIME_MUTABLE)]
+    #[ORM\Column(type: Types::DATE_MUTABLE)]
     private ?\DateTimeInterface $reservationDate = null;
 
     #[ORM\Column(type: Types::TIME_MUTABLE)]
