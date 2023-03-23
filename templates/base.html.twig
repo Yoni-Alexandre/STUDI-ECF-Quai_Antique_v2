@@ -38,7 +38,7 @@
 
             {# Si l'utilisateur est connecté #}
             {% if app.user %}
-                <a href="#">Mon compte <small>({{ app.user.firstname }})</small></a> |||| <a href="{{ path('app_logout')}}">Déconnexion</a>
+                <a href="{{ path('account') }}">Mon compte <small>({{ app.user.firstname }})</small></a> |||| <a href="{{ path('app_logout')}}">Déconnexion</a>
             {% else %}
                 <a href="{{ path('app_login') }}">Connexion</a> |||| <a href="{{ path('app_register') }}">Inscription</a>
             {% endif %}
