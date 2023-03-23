@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Le Quai Antique - {{ productSlug.name }} {% endblock %}
+
+{% block content %}
+
+    <h1>{{ productSlug.name }}</h1>
+    <div class="row">
+        <div class="col-md-5">
+            <img src="/uploads/images/{{ productSlug.illustration }}" alt="{{ productSlug.name }}" class="img-fluid">
+        </div>
+        <div class="col-md-7 my-auto">
+            <h3>{{ productSlug.name }}</h3>
+            <p>{{ productSlug.subtitle }}</p>
+            <span class="carte-page-price">{{ (productSlug.price /100) | number_format(2, ',', '.') }} €</span>
+            <hr>
+            <p>
+                {{ productSlug.description }}
+            </p>
+        </div>
+    </div>
+{% endblock %}
