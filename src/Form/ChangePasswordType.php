@@ -22,24 +22,24 @@ class ChangePasswordType extends AbstractType
                     'class' => 'form-control'
                 ],
                 'disabled' => true,
-                'label' => 'Mon adresse Email'
+                'label' => 'E-mail'
             ])
             ->add('firstname', TextType::class, [
                 'attr' => [
                     'class' => 'form-control'
                 ],
                 'disabled' => true,
-                'label' => 'Mon prénom'
+                'label' => 'Prénom'
             ])
             ->add('lastname', TextType::class, [
                 'attr' => [
                     'class' => 'form-control'
                 ],
                 'disabled' => true,
-                'label' => 'Mon nom'
+                'label' => 'Nom'
             ])
             ->add('old_password', PasswordType::class, [
-                'label' => 'Mon mot de passe actuel',
+                'label' => 'Mot de passe actuel',
                 'mapped' => false,
                 'attr' => [
                     'placeholder' => 'Veuillez saisir votre mot de passe actuel',
@@ -53,10 +53,10 @@ class ChangePasswordType extends AbstractType
                 'type' => PasswordType::class,
                 'mapped' => false,
                 'invalid_message' => 'Le mot de passe et la confirmation doivent être identiques.' ,
-                'label' => 'mon nouveau mot de passe',
+                'label' => 'Nouveau mot de passe',
                 'required' => true,
                 'first_options' => [
-                    'label' => 'Mon nouveau mot de passe',
+                    'label' => 'Nouveau mot de passe',
                     'attr' => [
                         'placeholder' => 'Merci de saisir votre nouveau mot de passe',
                         'class' => 'form-control'
