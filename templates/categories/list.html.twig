@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Le Quai Antique - {{ categories.name }}{% endblock %}
+
+{% block content %}
+    <main class="container">
+        <section class="row">
+            <div class="col-12">
+                <h1>{{ categories.name }}</h1>
+            </div>
+            {% for product in products %}
+                <div class="col-md-4 my-auto">
+                    <div class="carte-item text-center">
+                        <a href="{{ path('product', { 'slug' : product.slug }) }}">
+                            <img src="/uploads/images/{{ product.illustration }}" alt="{{ product.name }}" class="img-fluid">
+                        </a>
+                        <h5>{{ product.name }}</h5>
+                        <span class="carte-subtitle">{{ product.subtitle }}</span>
+                        <span class="carte-price">{{ (product.price /100) | number_format(2, ',', '.') }} €</span>
+                    </div>
+                </div>
+            {% endfor %}
+        </section>
+    </main>
+{% endblock %}

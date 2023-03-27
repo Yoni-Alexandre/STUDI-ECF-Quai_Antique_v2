@@ -6,15 +6,16 @@
     <main class="container">
         <section class="row">
             <div class="col-12">
-                <h1>Nos catégories</h1>
+                <h1>Notre carte</h1>
+                <img src="{{ asset('uploads/images/chef-g3a1012088_1280.png') }} "width="50" height="500" class="card-img-top" alt="Placer une image">
             </div>
             {% for category in categories %}
                 <div class="col-4">
                     <div class="card h-100" style="width: 20rem;">
-                        <img src="..." class="card-img-top" alt="Placer une image">
+{#                        <img src="/uploads/images/{{ products[1].illustration }}" class="card-img-top" alt="Placer une image">#}
                         <div class="card-body">
                             <h3 class="card-title">{{ category.name}}</h3>
-                            <a href="#" class="btn btn-primary">Voir nos plats</a>
+                            <a href="{{ path('categories_list', {'slug': category.slug}) }}" class="btn btn-primary">Voir nos plats</a>
                         </div>
                     </div>
                 </div>

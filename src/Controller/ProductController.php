@@ -43,7 +43,6 @@ class ProductController extends AbstractController
         ]);
     }
 
-
     #[Route('/produit/{slug}', name: 'product')]
     public function showSlug(Products $productSlug/*, $id */ ): Response
     {
