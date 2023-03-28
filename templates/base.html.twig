@@ -31,7 +31,7 @@
                     <a class="nav-link" href="{{ path('product_categories')}}">La Carte</a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="{{ path('products')}}">Nos Menus</a>
+                    <a class="nav-link" href="{{ path('menus')}}">Nos Menus</a>
                 </li>
             </ul>
             <div class="navbar-item-custom">
@@ -62,12 +62,12 @@
         <div class="carousel-inner">
             {# Si la clé (key) est en position d'origine (0) alors la classe "active" devient active #}
             {% for key,header in headers %}
-                <div class="carousel-item {% if key == 0 %}active{% endif %}" style="background: url('uploads/images/{{ header.illustration }}');background-size: cover;">
+                <div class="carousel-image carousel-item {% if key == 0 %}active{% endif %}" style="background: url('uploads/images/{{ header.illustration }}');background-size: cover;">
                     <div class="container">
                         <div class="carousel-caption text-left">
-                            <h1>{{ header.name }}</h1>
-                            <p>{{ header.content }}</p>
-                            <p><a class="btn btn-lg btn-info" href="{{ header.btnUrl }}" role="button">{{ header.btnTitle }}</a></p>
+                            <h1 class="carousel-h1">{{ header.name }}</h1>
+                            <p class="carousel-p">{{ header.content }}</p>
+                            <p><a class="carousel-p btn btn-lg btn-info" href="{{ header.btnUrl }}" role="button">{{ header.btnTitle }}</a></p>
                         </div>
                     </div>
                 </div>
@@ -131,5 +131,8 @@
 </main>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="{{ asset('assets/js/bootstrap.bundle.js') }}"></script>
+{% block js %}
+<script> src="{{ asset('assets/js/lequaiantique.js') }}" </script>
+{% endblock %}
 </body>
 </html>

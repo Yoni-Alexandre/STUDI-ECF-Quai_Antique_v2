@@ -6,6 +6,7 @@ use App\Entity\Bodies;
 use App\Entity\Categories;
 use App\Entity\Headers;
 use App\Entity\HomeIllustrations;
+use App\Entity\Menus;
 use App\Entity\OpeningHours;
 use App\Entity\Products;
 use App\Entity\Reservations;
@@ -69,6 +70,7 @@ class DashboardController extends AbstractDashboardController
         yield MenuItem::linkToCrud('Utilisateurs', 'fa fa-user', Users::class);
         yield MenuItem::linkToCrud('Catégories', 'fa fa-list-check', Categories::class);
         yield MenuItem::linkToCrud('Produits', 'fa fa-utensils', Products::class);
+        yield MenuItem::linkToCrud('Menus', 'fa fa-utensils', Menus::class);
         yield MenuItem::linkToCrud('Réservations', 'fa fa-calendar-days', Reservations::class);
         yield MenuItem::section("Gestion de contenus", 'fa fa-gear');
         yield MenuItem::linkToCrud('Carousel', 'fa fa-desktop', Headers::class);

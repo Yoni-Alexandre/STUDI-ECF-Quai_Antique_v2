@@ -31,12 +31,31 @@ body {
     max-height: 40px;
 }
 
+/* CAROUSSEL */
+/*.carousel-h1 {*/
+/*    font-size: 100px;*/
+/*    color: black;*/
+/*    background-color: #CBC5EA;*/
+/*    opacity: 0.9;*/
+/*}*/
+
+/*.carousel-p {*/
+/*    font-size: 20px;*/
+/*    color: black;*/
+/*    background-color: #CBC5EA;*/
+/*    opacity: 0.9;*/
+/*}*/
+
+/*.carousel-image{*/
+/*    opacity: 1;*/
+/*}*/
+
 /* HEADER - CONNEXION | INSCRIPTION */
 .navbar-item-custom, .navbar-item-custom a {
     color: #fff;
 }
 /*** MAIN ***/
-/* 3 colonnes au dessous du carousel */
+/* 3 colonnes (images rondes) au dessous du carousel */
 .bd-placeholder-img {
     font-size: 1.125rem;
     text-anchor: middle;
@@ -75,6 +94,12 @@ svg {
 
 .carte-page-price {
     font-size: 20px;
+}
+
+/* PAGE MENU*/
+.menu-p {
+    font-style: italic;
+    text-align: center;
 }
 
 /* PAGE DE RESERVATION  */
