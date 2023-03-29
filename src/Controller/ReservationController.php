@@ -122,4 +122,14 @@ class ReservationController extends AbstractController
             'openingHours' => $openingHours,
         ]);
     }
+
+    #[Route('/reservation/{id}/suppression', name: 'reservation_delete')]
+    public function delete(Reservations $reservation): Response
+    {
+        $this->entityManager->remove($reservation);
+        $this->entityManager->flush();
+
+        return $this->redirectToRoute('delete');
+    }
+
 }

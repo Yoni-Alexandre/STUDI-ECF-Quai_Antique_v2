@@ -32,7 +32,15 @@ class HomeController extends AbstractController
             'homeIllustrations' => $homeIllustrations,
             'bodyIllustrations' => $bodyIllustrations,
             'openingHours' => $openingHours
-
         ]);
     }
+    #[Route('/suppression', name: 'delete')]
+    public function redirectToDelete(): Response
+    {
+        $openingHours = $this->entityManager->getRepository(OpeningHours::class)->findAll();
+        return $this->render('home/delete.html.twig', [
+            'openingHours' => $openingHours
+        ]);
+    }
+
 }

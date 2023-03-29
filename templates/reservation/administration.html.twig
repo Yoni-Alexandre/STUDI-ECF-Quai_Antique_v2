@@ -21,8 +21,9 @@
                     <td>{{ reservations.lastname }}</td>
                     <td>{{ reservations.numberOfGuest }}</td>
                     <td>
-{#                        <a href="{{ path('view', {id: reservations.id}) }}" class="btn btn-primary">Voir</a>#}
                         <a href="{{ path('reservation_edit', {id: reservations.id}) }}" class="btn btn-secondary">Modifier</a>
+                        <a href="{{ path('reservation_delete', {id: reservations.id}) }}" class="btn btn-danger">Supprimer</a>
+
                     </td>
                 </tr>
             </tbody>
