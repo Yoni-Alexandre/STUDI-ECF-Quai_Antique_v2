@@ -20,6 +20,7 @@ class AccountController extends AbstractController
     public function index(): Response
     {
         $openingHours = $this->entityManager->getRepository(OpeningHours::class)->findAll();
+
         return $this->render('account/index.html.twig', [
             'openingHours' => $openingHours
         ]);

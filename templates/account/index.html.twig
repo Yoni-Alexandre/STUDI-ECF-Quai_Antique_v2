@@ -11,14 +11,13 @@
         <hr>
         <a href="{{ path('admin') }}" target="_blank">Console d'administration</a><br>
         <a href="{{ path('account_password') }}">Modifier mon mot de passe</a><br>
-{#        <a href="{{ path('reservation') }}">Réserver une table</a><br>#}
-{#        <a href="{{ path('modifyReservation') }}">Modifier la réservation</a>#}
+        <a href="{{ path('view_user', {'userId': app.user.id}) }}">Voir mes réservations</a>
+
     {% else %}
         <p>C'est dans cet espace que vous allez pouvoir gérer la modification de votre mot de passe et ajouter une réservation.</p>
         <hr>
         <a href="{{ path('account_password') }}">Modifier mon mot de passe</a><br>
-{#        <a href="{{ path('reservation') }}">Réserver une table</a><br>#}
-{#        <a href="{{ path('modifyReservation') }}">Modifier la réservation</a>#}
+        <a href="{{ path('view_user', {'userId': app.user.id}) }}">Voir mes réservations</a>
     {% endif %}
 
     <hr>

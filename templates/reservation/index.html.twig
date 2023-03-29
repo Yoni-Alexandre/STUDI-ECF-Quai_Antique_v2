@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Le Quai Antique - Réservation{% endblock %}
+
+{% block content %}
+    <h1>Réservation</h1>
+    <section class="container">
+        <div class="row">
+            <div class="col">
+                {{ form_start(reservationForm) }}
+                {{ form_row(reservationForm.firstname) }}
+                {{ form_row(reservationForm.lastname) }}
+                {{ form_row(reservationForm.numberOfGuest) }}
+                {{ form_row(reservationForm.ReservationDate) }}
+                {{ form_row(reservationForm.reservationTime) }}
+                {{ form_row(reservationForm.allergie) }}
+                    <button type="submit" class="btn btn-primary my-3">Réserver</button>
+                {{ form_end(reservationForm) }}
+
+            </div>
+        </div>
+    </section>
+{% endblock %}
+

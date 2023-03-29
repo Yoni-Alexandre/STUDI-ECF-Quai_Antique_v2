@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mes réservations{% endblock %}
+
+{% block content %}
+    <h1>Mes réservations</h1>
+
+    {% if reservations|length > 0 %}
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">Nom de la réservation</th>
+                <th scope="col">Prénom</th>
+                <th scope="col">Nombre de personnes</th>
+                <th scope="col">Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for reservation in reservations %}
+                <tr>
+                    <td>{{ reservation.firstname }} </td>
+                    <td>{{ reservation.lastname }}</td>
+                    <td>{{ reservation.numberOfGuest }}</td>
+                    <td>
+{#                        <a href="{{ path('view', {id: reservations.id}) }}" class="btn btn-primary">Voir</a>#}
+                        <a href="{{ path('reservation_edit', {id: reservation.id}) }}" class="btn btn-secondary">Modifier</a>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>Vous n'avez aucune réservation pour le moment.</p>
+    {% endif %}
+{% endblock %}
+
