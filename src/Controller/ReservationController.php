@@ -71,7 +71,8 @@ class ReservationController extends AbstractController
             $this->entityManager->flush();
 
             if ($this->getUser()) {
-                return $this->redirectToRoute('view', [
+//                return $this->redirectToRoute('view', [
+                return $this->redirectToRoute('account', [
                     'id' => $reservation->getId()
                 ]);
             } else {

@@ -57,7 +57,7 @@ class ReservationType extends AbstractType
                     'class' => 'form-control',
                 ],
                 'data' => new DateTime(),
-                'minutes' => range(0, 30, 30),
+                'minutes' => range(0, 45, 15),
                 'html5' => false
             ])
             ->add('allergie', TextType::class, [

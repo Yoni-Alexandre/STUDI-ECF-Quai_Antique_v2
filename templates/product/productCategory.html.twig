@@ -11,7 +11,7 @@
             </div>
             {% for category in categories %}
                 <div class="col-4 text-center">
-                    <div class="card h-100">
+                    <div class="animation-card card h-100">
 {#                        <img src="/uploads/images/{{ products[1].illustration }}" class="card-img-top" alt="Placer une image">#}
                         <div class="card-body">
                             <h3 class="card-title">{{ category.name}}</h3>
@@ -22,4 +22,6 @@
             {% endfor %}
         </section>
     </main>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script src="{{ asset('assets/js/lequaiantique.js') }}"></script>
 {% endblock %}

@@ -114,20 +114,24 @@ svg {
     text-align: center;
 }
 
-/* FOOTER */
-footer {
-   background-color: #f8f8f8 !important
-}
+/* PAGE "NOTRE CARTE" */
 
-.footer-custom {
-    height: 50vh;
-}
+
 
 /* MENU */
 .img-menu-custom {
     width: 10px;
     height: 10px;
     color: #f8f8f8;
+}
+
+/* FOOTER */
+footer {
+    background-color: #f8f8f8 !important
+}
+
+.footer-custom {
+    height: 50vh;
 }
 
 /* RESPONSIVE */

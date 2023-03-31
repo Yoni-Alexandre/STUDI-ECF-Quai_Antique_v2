@@ -32,6 +32,8 @@
         </table>
     {% else %}
         <p>Vous n'avez aucune réservation pour le moment.</p>
+        <p><a href="{{ path('reservation') }}">Réserver</a></p>
+        <p><a href="{{ path('account') }}">Retournez sur votre compte</a></p>
     {% endif %}
 {% endblock %}
 
