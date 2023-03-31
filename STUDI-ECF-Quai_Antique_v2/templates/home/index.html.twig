@@ -1,0 +1,87 @@
+{% extends 'base.html.twig' %}
+
+{% block carousel %}{% endblock %}
+
+{% block content %}
+
+    <!-- 3 colonnes au dessous du carousel -->
+    <div class="row">
+    <div class="col-lg-4">
+    {% for homeIllustration in homeIllustrations %}
+        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" style="background: url('uploads/homeIllustration/{{ homeIllustration.illustrationCircleOne }}');background-size: cover;"></svg>
+        <h2>{{ homeIllustration.titleCircleOne }}</h2>
+        <p>{{ homeIllustration.contentIllustrationCircleOne }}</p>
+        <p><a class="btn btn-info" href="{{ homeIllustration.btnUrlCircleOne }}" role="button">{{ homeIllustration.btnCircleOne }}</a></p>
+        </div>
+
+        <div class="col-lg-4">
+            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" style="background: url('uploads/homeIllustration/{{ homeIllustration.illustrationCircleTwo }}');background-size: cover;"></svg>
+            <h2>{{ homeIllustration.titleCircleTwo }}</h2>
+            <p>{{ homeIllustration.contentIllustrationCircleTwo }}</p>
+            <p><a class="btn btn-info" href="{{ homeIllustration.btnUrlCircleTwo }}" role="button">{{ homeIllustration.btnCircleTwo }}</a></p>
+        </div>
+
+        <div class="col-lg-4">
+            <svg class="bd-placeholder-img rounded-circle" width="140" height="140" style="background: url('uploads/homeIllustration/{{ homeIllustration.illustrationCircleThree }}');background-size: cover;"></svg>
+            <h2>{{ homeIllustration.titleCircleThree }}</h2>
+            <p>{{ homeIllustration.contentIllustrationCircleThree }}</p>
+            <p><a class="btn btn-info" href="{{ homeIllustration.btnUrlCircleThree }}" role="button">{{ homeIllustration.btnCircleThree }}</a></p>
+        </div>
+        </div>
+    {% endfor %}
+
+
+    <!-- START TEXTES/IMAGES QUINCONCE -->
+
+    <hr class="featurette-divider">
+    {% for bodyIllustration in bodyIllustrations %}
+        <div class="row featurette">
+            <div class="col-md-7">
+                <h2 class="featurette-heading">{{ bodyIllustration.imageTitleOne }}</h2>
+                <p class="lead">{{ bodyIllustration.contentImageOne }}</p>
+            </div>
+            <div class="col-md-5">
+                <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" style="background: url('uploads/homeIllustration/{{ bodyIllustration.imageOne }}'); background-size: cover; background-position: center;"</svg>
+                <title>{{ bodyIllustration.imagePropertyOne}}</title>
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+            <div class="col-md-7 order-md-2">
+                <h2 class="featurette-heading">{{ bodyIllustration.imageTitleTwo }}</h2>
+                <p class="lead">{{ bodyIllustration.contentImageTwo }}</p>
+            </div>
+            <div class="col-md-5 order-md-1">
+                <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" style="background: url('uploads/homeIllustration/{{ bodyIllustration.imageTwo }}'); background-size: cover; background-position: center;"</svg>
+                <title>{{ bodyIllustration.imagePropertyTwo}}</title>
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+            <div class="col-md-7">
+                <h2 class="featurette-heading">{{ bodyIllustration.imageTitleThree }}</h2>
+                <p class="lead">{{ bodyIllustration.contentImageThree }}</p>
+            </div>
+            <div class="col-md-5">
+                <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" style="background: url('uploads/homeIllustration/{{ bodyIllustration.imageThree }}'); background-size: cover; background-position: center;"</svg>
+                <title>{{ bodyIllustration.imagePropertyThree}}</title>
+            </div>
+        </div>
+        <hr class="featurette-divider">
+    {% endfor %}
+    <!-- END TEXTES/IMAGES QUINCONCE -->
+
+    <div>
+        <p class="reservation-comment">Vous pouvez réserver en cliquant sur le bouton ci-dessous</p>
+        <a href="{{ path('reservation') }}" >
+            <button class="btn btn-info btn-lg col align-self-center" type="button">Réserver</button>
+        </a>
+
+    </div>
+
+
+{% endblock %}

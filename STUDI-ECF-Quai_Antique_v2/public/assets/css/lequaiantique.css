@@ -1,0 +1,142 @@
+/* GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lobster+Two&family=Playfair+Display:ital,wght@0,400;0,600;0,800;1,400;1,600;1,800&display=swap');
+
+/* COULEURS DU SITE */
+/* https://coolors.co/eaeaea-cbc5ea-73628a-313d5a-183642 */
+
+/* RESET CSS */
+html {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    background-color: #EAEAEA;
+    font-family: 'Playfair Display', 'sans-serif';
+    letter-spacing: 1px;
+}
+
+/**** HEADER ****/
+.navbar {
+    background-color: #313D5A;
+}
+
+.btn {
+    background-color: #73628A;
+}
+
+.img-reservation {
+    max-width: 40px;
+    max-height: 40px;
+}
+
+/* CAROUSSEL */
+/*.carousel-h1 {*/
+/*    font-size: 100px;*/
+/*    color: black;*/
+/*    background-color: #CBC5EA;*/
+/*    opacity: 0.9;*/
+/*}*/
+
+/*.carousel-p {*/
+/*    font-size: 20px;*/
+/*    color: black;*/
+/*    background-color: #CBC5EA;*/
+/*    opacity: 0.9;*/
+/*}*/
+
+/*.carousel-image{*/
+/*    opacity: 1;*/
+/*}*/
+
+/* HEADER - CONNEXION | INSCRIPTION */
+.navbar-item-custom, .navbar-item-custom a {
+    color: #fff;
+}
+/*** MAIN ***/
+/* 3 colonnes (images rondes) au dessous du carousel */
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+svg {
+    box-shadow: 5px -5px 5px -2px #000000;
+    border-radius: 0 40px 0 0;
+}
+
+/* PAGE DE LA CARTE */
+.carte-item {
+    margin-top: 50px;
+}
+
+.carte-item h5{
+    margin-top: 25px;
+    text-transform: uppercase;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.carte-item .carte-subtitle {
+    font-size: 14px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.carte-item .carte-price {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.carte-page-price {
+    font-size: 20px;
+}
+
+/* PAGE MENU*/
+.menu-p {
+    font-style: italic;
+    text-align: center;
+}
+
+/* PAGE DE RESERVATION  */
+.reservation-comment {
+    box-shadow: -6px -3px 11px -3px rgba(0,0,0,0.67);
+    border: 0px solid #1C6EA4;
+    border-radius: 24px 31px 15px 0px;
+    background-color: #CBC5EA;
+    color: black;
+    font-size: 20px;
+    font-style: italic;
+    text-align: center;
+}
+
+/* PAGE "NOTRE CARTE" */
+
+
+
+/* MENU */
+.img-menu-custom {
+    width: 10px;
+    height: 10px;
+    color: #f8f8f8;
+}
+
+/* FOOTER */
+footer {
+    background-color: #f8f8f8 !important
+}
+
+.footer-custom {
+    height: 50vh;
+}
+
+/* RESPONSIVE */
+@media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+    }
+}

@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Le Quai Antique - Mon compte{% endblock %}
+
+{% block content %}
+    <h1>Mon compte</h1>
+    <p>Bienvenue {{ app.user.firstname }} dans votre compte.</p>
+
+    {% if is_granted("ROLE_ADMIN") %}
+        <p>C'est dans cet espace que vous allez pouvoir gérer la console d'administration, la modification de votre mot de passe et ajouter une réservation.</p>
+        <hr>
+        <a href="{{ path('admin') }}" target="_blank">Console d'administration</a><br>
+        <a href="{{ path('account_password') }}">Modifier mon mot de passe</a><br>
+        <a href="{{ path('view_user', {'userId': app.user.id}) }}">Voir mes réservations</a>
+
+    {% else %}
+        <p>C'est dans cet espace que vous allez pouvoir gérer la modification de votre mot de passe et ajouter une réservation.</p>
+        <hr>
+        <a href="{{ path('account_password') }}">Modifier mon mot de passe</a><br>
+        <a href="{{ path('view_user', {'userId': app.user.id}) }}">Voir mes réservations</a>
+    {% endif %}
+
+    <hr>
+{% endblock %}
