@@ -89,7 +89,7 @@ class ReservationController extends AbstractController
         $maxReservationCount = $this->entityManager->getRepository(ReservationCount::class)->findAll();
         $maxReservationCount = $maxReservationCount[0]->getMaximunNumberOfReservation();
 
-        //Récupérer le nombre d'invités dans la table Reservations
+        // Récupérer le nombre d'invités dans la table Reservations
         $guestReservations = $this->entityManager->getRepository(Reservations::class)->findAll();
 
         // Boucle pour additionner le nombre d'invités
