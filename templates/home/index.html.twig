@@ -32,7 +32,6 @@
 
 
     <!-- START TEXTES/IMAGES QUINCONCE -->
-
     <hr class="featurette-divider">
     {% for bodyIllustration in bodyIllustrations %}
         <div class="row featurette">
@@ -41,7 +40,7 @@
                 <p class="lead">{{ bodyIllustration.contentImageOne }}</p>
             </div>
             <div class="col-md-5">
-                <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" style="background: url('uploads/homeIllustration/{{ bodyIllustration.imageOne }}'); background-size: cover; background-position: center;"</svg>
+                <svg class="svg-display bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" style="background: url('uploads/homeIllustration/{{ bodyIllustration.imageOne }}'); background-size: cover; background-position: center;"</svg>
                 <title>{{ bodyIllustration.imagePropertyOne}}</title>
             </div>
         </div>
@@ -54,7 +53,7 @@
                 <p class="lead">{{ bodyIllustration.contentImageTwo }}</p>
             </div>
             <div class="col-md-5 order-md-1">
-                <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" style="background: url('uploads/homeIllustration/{{ bodyIllustration.imageTwo }}'); background-size: cover; background-position: center;"</svg>
+                <svg class="svg-display bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" style="background: url('uploads/homeIllustration/{{ bodyIllustration.imageTwo }}'); background-size: cover; background-position: center;"</svg>
                 <title>{{ bodyIllustration.imagePropertyTwo}}</title>
             </div>
         </div>
@@ -67,7 +66,7 @@
                 <p class="lead">{{ bodyIllustration.contentImageThree }}</p>
             </div>
             <div class="col-md-5">
-                <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" style="background: url('uploads/homeIllustration/{{ bodyIllustration.imageThree }}'); background-size: cover; background-position: center;"</svg>
+                <svg class="svg-display bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" style="background: url('uploads/homeIllustration/{{ bodyIllustration.imageThree }}'); background-size: cover; background-position: center;"</svg>
                 <title>{{ bodyIllustration.imagePropertyThree}}</title>
             </div>
         </div>
@@ -75,13 +74,28 @@
     {% endfor %}
     <!-- END TEXTES/IMAGES QUINCONCE -->
 
+    <!-- START GALERIE D'IMAGES -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="text-center">Galerie d'images</h2>
+                <div class="row">
+                    {% for image in images %}
+                        <div class="col-md-4 mt-5">
+                            <svg width="350" height="350" style="background: url('uploads/homeIllustration/{{ image.image }}');background-size: cover; background-position: center"></svg>
+                            <title>{{ image.title }}</title>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <!-- END GALERIE D'IMAGES -->
+
     <div>
-        <p class="reservation-comment">Vous pouvez réserver en cliquant sur le bouton ci-dessous</p>
+        <p class="reservation-comment mt-5">Vous pouvez réserver en cliquant sur le bouton ci-dessous</p>
         <a href="{{ path('reservation') }}" >
             <button class="btn btn-info btn-lg col align-self-center" type="button">Réserver</button>
         </a>
-
     </div>
-
-
+        <script src="{{ asset('assets/js/lequaiantique.js') }}"></script>
 {% endblock %}

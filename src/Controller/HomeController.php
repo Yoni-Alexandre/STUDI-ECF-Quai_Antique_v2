@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\Bodies;
+use App\Entity\Gallery;
 use App\Entity\Headers;
 use App\Entity\HomeIllustrations;
 use App\Entity\OpeningHours;
@@ -25,13 +26,15 @@ class HomeController extends AbstractController
         $homeIllustrations = $this->entityManager->getRepository(HomeIllustrations::class)->findAll();
         $bodyIllustrations = $this->entityManager->getRepository(Bodies::class)->findAll();
         $openingHours = $this->entityManager->getRepository(OpeningHours::class)->findAll();
+        $images = $this->entityManager->getRepository(Gallery::class)->findAll();
 
 
         return $this->render('home/index.html.twig', [
             'headers' => $headers,
             'homeIllustrations' => $homeIllustrations,
             'bodyIllustrations' => $bodyIllustrations,
-            'openingHours' => $openingHours
+            'openingHours' => $openingHours,
+            'images' => $images
         ]);
     }
     #[Route('/suppression', name: 'delete')]

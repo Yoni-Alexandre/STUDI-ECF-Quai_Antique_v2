@@ -4,6 +4,7 @@ namespace App\Controller\Admin;
 
 use App\Entity\Bodies;
 use App\Entity\Categories;
+use App\Entity\Gallery;
 use App\Entity\Headers;
 use App\Entity\HomeIllustrations;
 use App\Entity\Menus;
@@ -78,6 +79,7 @@ class DashboardController extends AbstractDashboardController
         yield MenuItem::linkToCrud('Carousel', 'fa fa-desktop', Headers::class);
         yield MenuItem::linkToCrud('Corps du site (Haut)', 'fa fa-image', HomeIllustrations::class);
         yield MenuItem::linkToCrud('Corps du site (Bas)', 'fa fa-image', Bodies::class);
+        yield MenuItem::linkToCrud('Galerie image', 'fa fa-image', Gallery::class);
         yield MenuItem::linkToCrud('Horaires d\'ouverture', 'fa fa-clock', OpeningHours::class);
     }
 }
