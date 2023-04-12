@@ -90,7 +90,7 @@ Ce site web a été développé en utilisant les technologies suivantes :
 
 ```INSERT INTO users (email, roles, password, lastname, firstname) VALUES ('admin@lequaiantique.neoliaweb.fr', '[\"ROLE_ADMIN"\]', '$2y$13$RztYrnXRCgAeF5r6PTBnjOQ7uvGXSTeaQhNUKKers.8JEQHn7EyEG', 'Admin', 'Le Quai Antique');```
 
-- Le mot de passe crypter correspond à "123456"
+- Le mot de passe crypté correspond à "123456"
 
 - Depuis le site, se connecter en utilisant les identifiants suivants : admin@lequaiantique.neoliaweb.fr et le mot de passe "123456"
 
