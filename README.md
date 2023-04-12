@@ -8,32 +8,33 @@ Bienvenue sur le site Web de notre restaurant "Le Quai Antique", situé à Chamb
 
 Ce site web a été développé en utilisant les technologies suivantes :
 
-- Symfony 6 / PHP 8.1 / EasyAdmin : pour la gestion du contenu du site
-- HTML / CSS / JavaScript : pour la mise en page et les interactions utilisateur
+- Symfony 6 / PHP 8.1 / EasyAdmin 4 : pour la gestion du contenu du site
+- HTML / CSS / JavaScript : pour la mise en page et les interactions/animations de l'utilisateur
 - Bootstrap : pour la création d'un design réactif et mobile-friendly
 
 ## Projet crée par
 
-- Yoni-Alexandre Brault : développeur / designer
+- Yoni-Alexandre Brault : Développeur / Designer
 
 ## Importer et configurer le projet "Quai Antique"
 
-- Ce guide vous expliquera comment importer le projet Symfony "Le Quai Antique" à partir de GitHub et le configurer avec une base de données SQL et fixtures.
+- Ce guide vous expliquera comment importer le projet Symfony "Le Quai Antique" à partir de GitHub et le configurer avec une base de données SQL.
 
 ## Prérequis
 
 - Avoir installé Composer
 - Avoir un compte GitHub et avoir installé Git sur votre ordinateur
+- Avoir un serveur web et une base de données SQL (Laragon, XAMPP, WAMPP etc..)
 
 ## Etapes pour l'installation du projet "Le Quai Antique"
 
-- Ouvrez votre terminal et rendez-vous dans le répertoire où vous souhaitez importer le projet :
+- Ouvrez votre terminal (ou le terminal depuis votre IDE) et rendez-vous dans le répertoire où vous souhaitez importer le projet :
 
 ```cd /chemin/de/votre/projet```
  
 - Clonez le dépôt GitHub en utilisant la commande suivante :
 
-```git clone https://github.com/USERNAME/REPO_NAME.git```
+```git clone https://github.com/Yoni-Alexandre/STUDI-ECF-Quai_Antique_v2```
 
 - Une fois le dépôt cloné, rendez-vous dans le répertoire du projet avec la commande :
 
@@ -43,10 +44,6 @@ Ce site web a été développé en utilisant les technologies suivantes :
 
 ```composer install```
 
-- Créez un fichier .env à partir du fichier .env.example en utilisant la commande :
-
-```cp .env .example .env```
-
 - Ouvrez le fichier .env et modifiez les paramètres de configuration de la base de données en fonction de votre environnement local.
 
 - Mettre en route le serveur de base de données (Laragon, XAMPP, WAMPP etc..)
@@ -55,15 +52,47 @@ Ce site web a été développé en utilisant les technologies suivantes :
 
 ```symfony console doctrine:database:create```
 
-- Exécutez les migrations de la base de données en utilisant la commande :
+- Exécutez les migrations de la base de données en utilisant la commande (Les migrations dans Symfony sont déjà créees):
 
 ```symfony console doctrine:migrations:migrate```
 
-- Et voilà, le projet Symfony est maintenant importé et configuré avec une base de données SQL. Vous pouvez maintenant lancer le serveur de développement avec la commande :
+- Et voilà, le projet Symfony est maintenant importé et configuré avec une base de données SQL. 
+- Vous pouvez maintenant lancer le serveur de développement avec la commande :
 
-```symfony serve:start```
+```symfony serve:start``` ou ```symfony serve -d``
 
 - Et accéder à l'application en ouvrant votre navigateur à l'adresse http://localhost:8000.
+
+## Création d'un Administrateur"
+
+- Depuis le site, aller dans "Inscription" et repmlir les champs puis valider l'inscription avec le bouton "M'inscrire"
+
+- Depuis un terminal (sous réserve d'avoir configuré les variables d'environnement (sous Windows)), acceder à la base de données
+
+```mysql -u root -p```
+
+- Repmlir le mot de passe demandé (touche Entrée s'il n'y a pas de mot de passe dans le .env de l'application symfony)
+
+- Se connecter à la base de données (nom inscrit dans le .env, pour ma part le nom de ma base est "studi_le_quai_antique")
+- Pour voir les base de données existantes (SHOW DATABASES;)
+
+```USE studi_le_quai_antique;```
+
+- vérifier que les tables soient bien importées
+
+```SHOW TABLES;```
+
+- Controller la table "users" pour voir les champs sont remplis (si vide aucunes données ne seront visibles)
+
+```SELECT * FROM users;```
+
+- Créer un administrateur dans la table "users" en lui donnant le role "ROLE_ADMIN"
+
+```INSERT INTO users (email, roles, password, lastname, firstname) VALUES ('admin@lequaiantique.neoliaweb.fr', '[\"ROLE_ADMIN"\]', '$2y$13$RztYrnXRCgAeF5r6PTBnjOQ7uvGXSTeaQhNUKKers.8JEQHn7EyEG', 'Admin', 'Le Quai Antique');```
+
+- Le mot de passe crypter correspond à "123456"
+
+Depuis le site, se connecter en utilisant les identifiants suivants : admin@lequaiantique.neoliaweb.fr et le mot de passe "123456"
 
 ## Importer la base de données SQL (en mode console)
 - Sous Windows, ajouter dans les variables d'environnement le chemin vers le dossier "bin" de votre serveur de base de données (Laragon, XAMPP, WAMPP etc..)
