@@ -92,7 +92,7 @@ Ce site web a été développé en utilisant les technologies suivantes :
 
 - Le mot de passe crypter correspond à "123456"
 
-Depuis le site, se connecter en utilisant les identifiants suivants : admin@lequaiantique.neoliaweb.fr et le mot de passe "123456"
+- Depuis le site, se connecter en utilisant les identifiants suivants : admin@lequaiantique.neoliaweb.fr et le mot de passe "123456"
 
 ## Importer la base de données SQL (en mode console)
 - Sous Windows, ajouter dans les variables d'environnement le chemin vers le dossier "bin" de votre serveur de base de données (Laragon, XAMPP, WAMPP etc..)
@@ -341,8 +341,3 @@ ALTER TABLE `reservations`
   ADD CONSTRAINT `FK_4DA23967B3B43D` FOREIGN KEY (`users_id`) REFERENCES `users` (`id`);
 COMMIT;
 ```
-## Importer les fixtures
-
-
-
-
