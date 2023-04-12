@@ -94,9 +94,9 @@ Ce site web a été développé en utilisant les technologies suivantes :
 
 - Depuis le site, se connecter en utilisant les identifiants suivants : admin@lequaiantique.neoliaweb.fr et le mot de passe "123456"
 
-## ######################################################################################################
-## POUR ALLER PLUS LOIN, D'AUTRES METHODES D'IMPORTATION ET CREATION (mais non nécessaire pour le projet) 
-## ######################################################################################################
+## #########################################################################################################
+## POUR ALLER PLUS LOIN, D'AUTRES METHODES D'IMPORTATIONS ET CREATIONS (mais non nécessaire pour le projet) 
+## #########################################################################################################
 
 ## Importer la base de données SQL (en mode console)
 - Sous Windows, ajouter dans les variables d'environnement le chemin vers le dossier "bin" de votre serveur de base de données (Laragon, XAMPP, WAMPP etc..)
