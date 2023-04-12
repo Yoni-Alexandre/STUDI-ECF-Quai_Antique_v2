@@ -92,6 +92,10 @@ Ce site web a été développé en utilisant les technologies suivantes :
 
 - Depuis le site, se connecter en utilisant les identifiants suivants : admin@lequaiantique.neoliaweb.fr et le mot de passe "123456"
 
+- Si problème, supprimer la base de données et recommencer les étapes ci-dessus
+
+```DROP DATABASE studi_le_quai_antique;```
+
 ## #########################################################################################################
 ## POUR ALLER PLUS LOIN, D'AUTRES METHODES D'IMPORTATIONS ET CREATIONS (mais non nécessaire pour le projet) 
 ## #########################################################################################################
