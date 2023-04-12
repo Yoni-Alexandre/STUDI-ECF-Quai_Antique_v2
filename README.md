@@ -96,6 +96,11 @@ Ce site web a été développé en utilisant les technologies suivantes :
 
 ```DROP DATABASE studi_le_quai_antique;```
 
+- se rendre sur la page "Mon compte" et cliquer sur "Console d'administration" pour pouvoir integrer des données sur le site.
+- *************************************************************************************************************************************************************
+- ATTENTION : pour pouvoir réserver, il faut en premier lieu que l'administrateur est intégré un nombre de couvert depuis l'interface d'administration du site.
+- *************************************************************************************************************************************************************
+
 ## #########################################################################################################
 ## POUR ALLER PLUS LOIN, D'AUTRES METHODES D'IMPORTATIONS ET CREATIONS (mais non nécessaire pour le projet) 
 ## #########################################################################################################
