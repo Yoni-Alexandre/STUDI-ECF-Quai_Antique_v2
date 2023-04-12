@@ -98,7 +98,7 @@ Ce site web a été développé en utilisant les technologies suivantes :
 
 - se rendre sur la page "Mon compte" et cliquer sur "Console d'administration" pour pouvoir integrer des données sur le site.
 - *************************************************************************************************************************************************************
-- ATTENTION : pour pouvoir réserver, il faut en premier lieu que l'administrateur est intégré un nombre de couvert depuis l'interface d'administration du site.
+- ATTENTION : pour pouvoir réserver, il faut en premier lieu que l'administrateur est intégré un "Nombre de couverts" depuis l'interface d'administration du site.
 - *************************************************************************************************************************************************************
 
 ## #########################################################################################################
