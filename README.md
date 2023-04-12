@@ -65,8 +65,6 @@ Ce site web a été développé en utilisant les technologies suivantes :
 
 ## Création d'un Administrateur
 
-- Depuis le site, aller dans "Inscription" et repmlir les champs puis valider l'inscription avec le bouton "M'inscrire"
-
 - Depuis un terminal (sous réserve d'avoir configuré les variables d'environnement (sous Windows)), acceder à la base de données
 
 ```mysql -u root -p```
