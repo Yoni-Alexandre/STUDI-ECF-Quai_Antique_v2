@@ -63,7 +63,7 @@ Ce site web a été développé en utilisant les technologies suivantes :
 
 - Et accéder à l'application en ouvrant votre navigateur à l'adresse http://localhost:8000.
 
-## Création d'un Administrateur"
+## Création d'un Administrateur
 
 - Depuis le site, aller dans "Inscription" et repmlir les champs puis valider l'inscription avec le bouton "M'inscrire"
 
@@ -93,6 +93,10 @@ Ce site web a été développé en utilisant les technologies suivantes :
 - Le mot de passe crypter correspond à "123456"
 
 - Depuis le site, se connecter en utilisant les identifiants suivants : admin@lequaiantique.neoliaweb.fr et le mot de passe "123456"
+
+## ######################################################################################################
+## POUR ALLER PLUS LOIN, D'AUTRES METHODES D'IMPORTATION ET CREATION (mais non nécessaire pour le projet) 
+## ######################################################################################################
 
 ## Importer la base de données SQL (en mode console)
 - Sous Windows, ajouter dans les variables d'environnement le chemin vers le dossier "bin" de votre serveur de base de données (Laragon, XAMPP, WAMPP etc..)
