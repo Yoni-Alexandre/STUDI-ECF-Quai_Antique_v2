@@ -100,6 +100,17 @@ Ce site web a été développé en utilisant les technologies suivantes :
 - *************************************************************************************************************************************************************
 - ATTENTION : pour pouvoir réserver, il faut en premier lieu que l'administrateur est intégré un "Nombre de couverts" depuis l'interface d'administration du site.
 - *************************************************************************************************************************************************************
+- 
+- *************************************************************************************************************************************************************
+- Fixtures
+- **************************************************************************************************************************************************************
+- Ajout des fixtures
+```composer require --dev orm-fixtures```
+```composer require --dev fakerphp/faker```
+
+- Utiliser la commande
+```symfony console doctrine:fixtures:load```
+
 
 ## #########################################################################################################
 ## POUR ALLER PLUS LOIN, D'AUTRES METHODES D'IMPORTATIONS ET CREATIONS (mais non nécessaire pour le projet) 
