@@ -101,9 +101,9 @@ Ce site web a été développé en utilisant les technologies suivantes :
 - ATTENTION : pour pouvoir réserver, il faut en premier lieu que l'administrateur est intégré un "Nombre de couverts" depuis l'interface d'administration du site.
 - *************************************************************************************************************************************************************
 - 
-- *************************************************************************************************************************************************************
-- Fixtures
-- **************************************************************************************************************************************************************
+
+## Fixtures
+
 - Ajout des fixtures
 ```composer require --dev orm-fixtures```
 ```composer require --dev fakerphp/faker```
