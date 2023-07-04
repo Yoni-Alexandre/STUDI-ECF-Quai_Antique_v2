@@ -3,20 +3,19 @@
 {% block title %}Le Quai Antique - Nos Menus{% endblock %}
 
 {% block content %}
-    <main class="justify-content-center container">
-        <section class="row">
+    <main class="container">
+        <div class="row justify-content-center">
             <div class="col-12">
-                <h1>Nos Menus</h1>
+                <h1 class="text-center">Nos Menus</h1>
             </div>
             {% for menu in menus %}
-                <div class="col-4 text-center">
+                <div class="col-12 col-sm-6 col-md-4 mb-4">
                     <div class="card h-100">
                         <div class="card-body">
-                            <h2 class="card-title">{{ menu.title}}</h2>
-                            <span class="carte-subtitle">{{ menu.subtitle }}</span>
-                                <div class="featurette-divider carte-item text-center">
-                            <span class="carte-price">{{ (menu.price /100) | number_format(2, ',', '.') }} €</span>
-                                </div>
+                            <h2 class="card-title text-center">{{ menu.title}}</h2>
+                            <span class="carte-subtitle text-center">{{ menu.subtitle }}</span>
+                            <hr class="featurette-divider my-3">
+                            <span class="carte-price d-block text-center">{{ (menu.price / 100) | number_format(2, ',', '.') }} €</span>
                             <p class="menu-p">{{ menu.optionOne }}</p>
                             <p class="menu-p">{{ menu.optionTwo }}</p>
                             <p class="menu-p">{{ menu.optionThree }}</p>
@@ -25,7 +24,7 @@
                     </div>
                 </div>
             {% endfor %}
-        </section>
+        </div>
     </main>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
